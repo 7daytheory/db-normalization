@@ -85,15 +85,15 @@
 
   <h2>(2NF) 2 Normal Forms</h2>
   <p>2NF requires that the table is in 1NF and that all non-key attributes are fully functionally dependent on the primary key. This means that no non-key attribute should depend on only part of a composite primary key.</p>
-       <table>
-    <thead>
-      <tr>
-        <th>player_id</th>
-        <th>item_type</th>
-        <th>item_quantity</th>
-        <th>player_rating</th>
-      </tr>
-    </thead>
+    <table>
+        <thead>
+        <tr>
+            <th>player_id</th>
+            <th>item_type</th>
+            <th>item_quantity</th>
+            <th>player_rating</th>
+        </tr>
+        </thead>
     <tbody>
       <tr>
         <td>1</td>
@@ -141,5 +141,66 @@
     <li>{player_id, item_type } -> {item_quantity} this works but the player_id -> player_rating does not</li>
     <li>Player would need it's own table , remove the player_rating and create a new player table, you can add more items like name, birthdate etc</li>
   </ul>
+  <table>
+        <thead>
+        <tr>
+            <th>player_id</th>
+            <th>item_type</th>
+            <th>item_quantity</th>
+        </tr>
+        </thead>
+    <tbody>
+     <tbody>
+      <tr>
+        <td>1</td>
+        <td>amulets</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>rings</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>coins</td>
+        <td>18</td>
+      </tr>
+       <tr>
+        <td>1</td>
+        <td>shields</td>
+        <td>3</td>
+      </tr>
+       <tr>
+        <td>2</td>
+        <td>coins</td>
+        <td>30</td>
+      </tr>
+       <tr>
+        <td>2</td>
+        <td>rings</td>
+        <td>3</td>
+      </tr>
+    </tbody>
+  </table>
+  <table>
+        <thead>
+        <tr>
+            <th>player_id</th>
+            <th>player_rating</th>
+        </tr>
+        </thead>
+    <tbody>
+     <tbody>
+      <tr>
+        <td>1</td>
+        <td>advanced</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>beginner</td>
+      </tr>
+    </tbody>
+  </table>
 </body>
 </html>
