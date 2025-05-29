@@ -294,7 +294,124 @@
     </table>
 
    <h3>At this point you have FULLY normalized your table!</h3>
+   
+   <h2>4Nf - 4 Normal Form</h2>
+   <p>4NF deals with multi-valued dependencies. A table is in 4NF if it is in Boyce-Codd Normal Form (BCNF) and has no multi-valued dependencies.</p>
 
+   <table>
+        <thead>
+            <tr>
+                <th>model</th>
+                <th>color</th>
+                <th>style</th>
+            </tr>
+            </thead>
+             <tbody>
+      <tr>
+        <td>Tweety</td>
+        <td>Yellow</td>
+        <td>Bungalow</td>
+      </tr>
+      <tr>
+        <td>Tweety</td>
+        <td>Yellow</td>
+        <td>Duplex</td>
+      </tr>
+      <tr>
+        <td>Tweety</td>
+        <td>Blue</td>
+        <td>Duplex</td>
+      </tr>
+      <tr>
+        <td>Tweety</td>
+        <td>Blue</td>
+        <td>Bungalow</td>
+      </tr>
+      <tr>
+        <td>Metro</td>
+        <td>Yellow</td>
+        <td>Bungalow</td>
+      </tr>
+      <tr>
+        <td>Metro</td>
+        <td>Yellow</td>
+        <td>Duplex</td>
+      </tr>
+      <tr>
+        <td>Metro</td>
+        <td>Blue</td>
+        <td>Duplex</td>
+      </tr>
+      <tr>
+        <td>Metro</td>
+        <td>Blue</td>
+        <td>Bungalow</td>
+        <tr>
+        <td>Praire</td>
+        <td>Yellow</td>
+        <td>Bungalow</td>
+      </tr>
+      <tr>
+        <td>Praire</td>
+        <td>Yellow</td>
+        <td>Duplex</td>
+      </tr>
+      <tr>
+        <td>Praire</td>
+        <td>Blue</td>
+        <td>Duplex</td>
+      </tr>
+      <tr>
+        <td>Praire</td>
+        <td>Blue</td>
+        <td>Bungalow</td>
+      </tr>
+      <tr>
+        <td>Praire</td>
+        <td>GREEN</td>
+        <td>Bungalow</td>
+      </tr>
+    </tbody>
+    </table>
+   <p>{Model} => {color} , {Model} => {style} , in the example above the Praire birdhouse is available in green but only the bungalow shows in green  </p>
+   <p>To resolve this, we can create a new table for the styles and link it to the model and color.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Color</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Tweety</td><td>Yellow</td></tr>
+    <tr><td>Tweety</td><td>Blue</td></tr>
+    <tr><td>Metro</td><td>Yellow</td></tr>
+    <tr><td>Metro</td><td>Blue</td></tr>
+    <tr><td>Praire</td><td>Yellow</td></tr>
+    <tr><td>Praire</td><td>Blue</td></tr>
+    <tr><td>Praire</td><td>GREEN</td></tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Style</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Tweety</td><td>Bungalow</td></tr>
+    <tr><td>Tweety</td><td>Duplex</td></tr>
+    <tr><td>Metro</td><td>Bungalow</td></tr>
+    <tr><td>Metro</td><td>Duplex</td></tr>
+    <tr><td>Praire</td><td>Bungalow</td></tr>
+    <tr><td>Praire</td><td>Duplex</td></tr>
+  </tbody>
+</table>
+
+<p>4NF - Multivalued dependencies in a table must be multivalued depencies on the key</p>
 
 </body>
 </html>
