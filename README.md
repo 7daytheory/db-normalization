@@ -9,4 +9,6 @@
 <p>Ensures that: Each table cell holds one value (no arrays/lists). </p>s
 <p>Violating 1NF - Using row order to communicate(order) information, different data types if it even allows you (int field having a string), PRIMARY KEY is set<p>
 
+## 3NF - Once you have normalized your table to 3NF it is considered fully normalized.
+
 
