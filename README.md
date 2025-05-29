@@ -7,6 +7,6 @@
 
 <h2>First Normal Form (1NF)</h2>
 <p>Ensures that: Each table cell holds one value (no arrays/lists). </p>s
-<p>Violating 1NF - Using row order to violate information, different data types<p>
+<p>Violating 1NF - Using row order to communicate(order) information, different data types if it even allows you (int field having a string), PRIMARY KEY is set<p>
 
 
