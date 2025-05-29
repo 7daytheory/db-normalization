@@ -1,2 +1,2 @@
-# Bittorrent Client
-Building My Own Bittorrent client with C#
+# Database Normalization
+Reviewing setting up an SQL database using 1NF - 5NF database normalization for security
