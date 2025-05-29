@@ -413,5 +413,79 @@
 
 <p>4NF - Multivalued dependencies in a table must be multivalued depencies on the key</p>
 
+<h2>5NF - 5 Normal Form</h2>
+<p>5NF - Table (which must already be in 4NF) cannot be describable as a logical result of joining some other tables together</p>
+<p>A table is in 5NF if it is in 4NF and every join dependency in the table is a consequence of the candidate keys.</p>
+
+<h3>Available Flavors</h3>
+<p>flavors_by_brand</p>
+<table>
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Flavor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Frostys</td><td>Vanilla</td></tr>
+    <tr><td>Frostys</td><td>Strawberry</td></tr>
+    <tr><td>Frostys</td><td>Chocolate</td></tr>
+    <tr><td>Alpine</td><td>Vanilla</td></tr>
+    <tr><td>Alpine</td><td>Rum Raisin</td></tr>
+    <tr><td>Ice Queen</td><td>Vanilla</td></tr>
+    <tr><td>Ice Queen</td><td>Strawberry</td></tr>
+    <tr><td>Ice Queen</td><td>Chocolate</td></tr>
+  </tbody>
+</table>
+
+<h3>Preferred Brands by Persons</h3>
+<p>brands_by_person</p>
+<table>
+  <thead>
+    <tr>
+      <th>Person</th>
+      <th>Brand</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Jason</td><td>Frostys</td></tr>
+    <tr><td>Jason</td><td>Alpine</td></tr>
+    <tr><td>Matthew</td><td>Alpine</td></tr>
+    <tr><td>Matthew</td><td>Ice Queen</td></tr>
+  </tbody>
+</table>
+
+<h3>Preferred Flavour by Persons</h3>
+<p>flavors_by_person</p>
+<table>
+  <thead>
+    <tr>
+      <th>Person</th>
+      <th>Flavor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Jason</td><td>Vanilla</td></tr>
+    <tr><td>Jason</td><td>Chocolate</td></tr>
+    <tr><td>Matthew</td><td>Rum Raisin</td></tr>
+    <tr><td>Matthew</td><td>Chocolate</td></tr>
+    <tr><td>Matthew</td><td>Strawberry</td></tr>
+  </tbody>
+</table>
+
+<p>To get the values of what brand/flavor each person likes :</p>
+<p>Select pbrand.Person, bf.Brand, bf.Flavor from brands_by_person INNER JOIN flavors_by_person ON pbrand.Person = pflavor.Person inner JOIN flavors_by_brand bf ON pbrand.Brand = bf.Brand and pflavor.Flavor = bf.Flavor</p>
+<p>Comnbines each person's preferred brand and flavor, and filters the combo so we only keep the rows where the brand offers that flavor</p>
+
+| Person  | Brand     | Flavor     |
+| ------- | --------- | ---------- |
+| Jason   | Frostys   | Vanilla    |
+| Jason   | Frostys   | Chocolate  |
+| Jason   | Alpine    | Vanilla    |
+| Matthew | Alpine    | Rum Raisin |
+| Matthew | Ice Queen | Chocolate  |
+| Matthew | Ice Queen | Strawberry |
+
+
 </body>
 </html>
