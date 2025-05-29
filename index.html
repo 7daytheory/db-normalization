@@ -14,7 +14,59 @@
 <h2>Why Normalize?</h2>
 <p>Normalization helps to eliminate data anomalies, ensures data consistency, and makes the database easier to maintain. It also improves query performance by reducing the amount of data that needs to be processed.</p>
 
+<h2>1NF 1 Normal Forms</h2>
+<code>Table with the list of the beatles - George, John, Ringo, Paul</code>
+<p>You want them to display in order of their height.</p>
+<ul>
+    <li>If you use row order to show this you violate 1NF - you need to make another row (height) to convey this.</li>
+    <li>Mixing data types within in a column is a violation(if you can even do it) ex: int column</li>
+    <li>Add a primary key to table - Alter Table beatle_height ADD Primary Key (beatle_name)</li>
+    <li>Storing a repeating group of data items on a single row violates 1NF - example: player_items (2 rings, 4 amulets, 18 coins, 3 shields) in one row. Instead create an item_type and use the player_id , item_name, item_quantity and you can store as many items as you need.</li>
+</ul>
 
-    
+<h2>Table example</h2>
+<h3 style="text-align: center;">Player Inventory</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>player_id</th>
+        <th>item_type</th>
+        <th>item_quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>amulets</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>rings</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>coins</td>
+        <td>18</td>
+      </tr>
+       <tr>
+        <td>1</td>
+        <td>shields</td>
+        <td>3</td>
+      </tr>
+       <tr>
+        <td>2</td>
+        <td>coins</td>
+        <td>30</td>
+      </tr>
+       <tr>
+        <td>2</td>
+        <td>rings</td>
+        <td>3</td>
+      </tr>
+    </tbody>
+  </table>
+     
 </body>
 </html>

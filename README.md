@@ -4,3 +4,9 @@
 
 <h2>Why Normalize?</h2>
 <p>Normalization helps to eliminate data anomalies, ensures data consistency, and makes the database easier to maintain. It also improves query performance by reducing the amount of data that needs to be processed.</p>
+
+<h2>First Normal Form (1NF)</h2>
+<p>Ensures that: Each table cell holds one value (no arrays/lists). </p>s
+<p>Violating 1NF - Using row order to violate information, different data types<p>
+
+
