@@ -243,6 +243,58 @@
    <p>Player 1 has a rating of 4 but a skill level of beginner - To resolve this, we can create a separate table for player ratings and skill levels.</p>
    <p>Every attribute in the table should depend on the key, the table above is not</p>
    <p>Boyce-Codd Normal Form: Every attribute in a table should depend on the key, the whole key, and nothing but the key.</p>
+    <br>
+   <p>To achieve 3NF, we can create a new table for player skill levels and link it to the player ratings.</p>
+   <table>
+        <thead>
+            <tr>
+                <th>player_rating</th>
+                <th>player_skill_level</th>
+            </tr>
+            </thead>
+             <tbody>
+      <tr>
+        <td>1</td>
+        <td>beginner</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>beginner</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>beginner</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>intermediate</td>
+      </tr>
+       <tr>
+        <td>5</td>
+        <td>intermediate</td>
+      </tr>
+       <tr>
+        <td>6</td>
+        <td>intermediate</td>
+      </tr>
+       <tr>
+        <td>7</td>
+        <td>advanced</td>
+      </tr>
+       <tr>
+        <td>8</td>
+        <td>advanced</td>
+      </tr>
+       <tr>
+        <td>9</td>
+        <td>advanced</td>
+      </tr>
+    </tbody>
+    </table>
+
+   <h3>At this point you have FULLY normalized your table!</h3>
+
 
 </body>
 </html>
